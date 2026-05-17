@@ -1,6 +1,7 @@
 const mediaDataset = [
     {
         id: 1,
+        isFiction: true,
         title: "The Witcher 3: Wild Hunt",
         type: "game",
         genre: ["RPG", "Adventure", "Fantasy"],
@@ -8,7 +9,7 @@ const mediaDataset = [
         platforms: ["PC", "PlayStation", "Xbox", "Nintendo Switch"],
         availableOn: ["Steam", "GOG", "Epic Games Store"],
         priceType: "Paid",
-        image: "witcher-3.jpg",
+        image: "https://static.cdprojektred.com/cms.cdprojektred.com/a1afe3ab04f487cd385816b0b1a22209f8ef9e27.png",
 
         developer: "CD Projekt Red",
         publisher: "CD Projekt",
@@ -40,6 +41,7 @@ const mediaDataset = [
 
     {
         id: 2,
+        isFiction: true,
         title: "Cyberpunk 2077",
         type: "game",
         genre: ["RPG", "Action", "Sci-Fi"],
@@ -47,7 +49,7 @@ const mediaDataset = [
         platforms: ["PC", "PlayStation", "Xbox"],
         availableOn: ["Steam", "GOG", "Epic Games Store"],
         priceType: "Paid",
-        image: "cyberpunk-2077.jpg",
+        image: "https://image.api.playstation.com/vulcan/ap/rnd/202111/3013/UjQ1pWQiHwymgQQ6q4pWQkMC.png",
 
         developer: "CD Projekt Red",
         publisher: "CD Projekt",
@@ -79,6 +81,7 @@ const mediaDataset = [
 
     {
         id: 3,
+        isFiction: true,
         title: "Elden Ring",
         type: "game",
         genre: ["Action RPG", "Fantasy", "Open World"],
@@ -86,7 +89,7 @@ const mediaDataset = [
         platforms: ["PC", "PlayStation", "Xbox"],
         availableOn: ["Steam", "PlayStation Store", "Xbox Store"],
         priceType: "Paid",
-        image: "elden-ring.jpg",
+        image: "https://gaming-cdn.com/images/products/13652/orig/elden-ring-shadow-of-the-erdtree-pc-spiel-steam-europe-cover.jpg",
 
         developer: "FromSoftware",
         publisher: "Bandai Namco Entertainment",
@@ -118,6 +121,7 @@ const mediaDataset = [
 
     {
         id: 4,
+        isFiction: true,
         title: "Stardew Valley",
         type: "game",
         genre: ["Simulation", "Farming", "Indie"],
@@ -125,7 +129,7 @@ const mediaDataset = [
         platforms: ["PC", "PlayStation", "Xbox", "Nintendo Switch", "Mobile"],
         availableOn: ["Steam", "GOG", "Nintendo eShop", "App Store", "Google Play"],
         priceType: "Paid",
-        image: "stardew-valley.jpg",
+        image: "https://gaming-cdn.com/images/products/1767/616x353/stardew-valley-pc-mac-spiel-steam-cover.jpg",
 
         developer: "ConcernedApe",
         publisher: "ConcernedApe",
@@ -140,6 +144,7 @@ const mediaDataset = [
 
     {
         id: 5,
+        isFiction: true,
         title: "Hades",
         type: "game",
         genre: ["Roguelike", "Action", "Indie"],
@@ -147,7 +152,7 @@ const mediaDataset = [
         platforms: ["PC", "PlayStation", "Xbox", "Nintendo Switch"],
         availableOn: ["Steam", "Epic Games Store", "Nintendo eShop"],
         priceType: "Paid",
-        image: "hades.jpg",
+        image: "https://cdn1.epicgames.com/min/offer/2560x1440-2560x1440-5e710b93049cbd2125cf0261dcfbf943.jpg",
 
         developer: "Supergiant Games",
         publisher: "Supergiant Games",
@@ -179,6 +184,7 @@ const mediaDataset = [
 
     {
         id: 6,
+        isFiction: true,
         title: "Stranger Things",
         type: "movie/show",
         category: "TV Show",
@@ -187,7 +193,7 @@ const mediaDataset = [
         seasons: 4,
         availableOn: ["Netflix"],
         priceType: "Subscription",
-        image: "stranger-things.jpg",
+        image: "https://i.guim.co.uk/img/media/344f3917f3e40dbb745e498dd31ab84e4b098981/0_901_3000_2400/master/3000.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=e1ffd26623999fcfee0a25b27fc73797",
 
         developer: null,
         publisher: null,
@@ -235,6 +241,7 @@ const mediaDataset = [
 
     {
         id: 7,
+        isFiction: true,
         title: "Breaking Bad",
         type: "movie/show",
         category: "TV Show",
@@ -291,6 +298,7 @@ const mediaDataset = [
 
     {
         id: 8,
+        isFiction: true,
         title: "The Dark Knight",
         type: "movie/show",
         category: "Movie",
@@ -299,7 +307,7 @@ const mediaDataset = [
         duration: "2h 32m",
         availableOn: ["Netflix", "Amazon Prime Video", "Apple TV"],
         priceType: "Subscription / Rent / Buy",
-        image: "the-dark-knight.jpg",
+        image: "https://occ-0-8407-114.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABZ8vXIIWxTg8hEDW5Ez4c2O6rfL9nVKQ1LYBmV37SonNPjo00T22m3Cle5Pr77_6Jw8SXqWxMWw2dO5q3NQXtoCdAF9TxHSZj9KK.jpg?r=77f",
 
         developer: null,
         publisher: null,
@@ -343,6 +351,7 @@ const mediaDataset = [
 
     {
         id: 9,
+        isFiction: true,
         title: "Interstellar",
         type: "movie/show",
         category: "Movie",
@@ -351,7 +360,7 @@ const mediaDataset = [
         duration: "2h 49m",
         availableOn: ["Netflix", "Amazon Prime Video", "Apple TV"],
         priceType: "Subscription / Rent / Buy",
-        image: "interstellar.jpg",
+        image: "https://www.vodafone.de/featured/media/cache/hero_teaser_image/cms/2024/06/Interstellar-Ende-erklaert-53506448.jpg?v=1f1f98960b7fd126863b394b254326b6",
 
         developer: null,
         publisher: null,
@@ -391,6 +400,7 @@ const mediaDataset = [
 
     {
         id: 10,
+        isFiction: true,
         title: "Arcane",
         type: "movie/show",
         category: "TV Show",
@@ -399,7 +409,7 @@ const mediaDataset = [
         seasons: 2,
         availableOn: ["Netflix"],
         priceType: "Subscription",
-        image: "arcane.jpg",
+        image: "https://www.rollingstone.com/wp-content/uploads/2024/12/C_Arcane_u_S2_00_24_00_15_R60.jpg?w=1581&h=1054&crop=1",
 
         developer: null,
         publisher: null,
@@ -439,6 +449,7 @@ const mediaDataset = [
 
     {
         id: 11,
+        isFiction: true,
         title: "The Last of Us",
         type: "game",
         genre: ["Action", "Adventure", "Survival"],
@@ -446,7 +457,7 @@ const mediaDataset = [
         platforms: ["PlayStation", "PC"],
         availableOn: ["PlayStation Store", "Steam"],
         priceType: "Paid",
-        image: "the-last-of-us.jpg",
+        image: "https://www.gbhbl.com/wp-content/uploads/2016/09/30933_the_last_of_us.jpg",
 
         developer: "Naughty Dog",
         publisher: "Sony Computer Entertainment",
@@ -482,6 +493,7 @@ const mediaDataset = [
 
     {
         id: 12,
+        isFiction: true,
         title: "The Last of Us",
         type: "movie/show",
         category: "TV Show",
@@ -536,5 +548,8 @@ const mediaDataset = [
         description: "A TV adaptation of the popular game about survival, loss, and human connection."
     }
 ];
+
+
+
 
 export default mediaDataset;

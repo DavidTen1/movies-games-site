@@ -13,3 +13,7 @@ function sortEntriesBy(property) {
         : undefined;
 }
 
+function mapKeyToImage(){
+
+}
+

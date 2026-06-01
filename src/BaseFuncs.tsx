@@ -2,16 +2,18 @@ import mediaDataset from "./datasetFile.tsx";
 
 type MediaItem = typeof mediaDataset[number];
 
-function filterByProp(userInput: string) {
-    return mediaDataset.filter((x) =>
-        Object.values(x).some((value) => {
+function filterByProp(userInput: string, property?: keyof MediaItem) {
+    return mediaDataset.filter((x) => {
+        const values = property ? [x[property]] : Object.values(x);
+
+        return values.some((value) => {
             if (Array.isArray(value)) {
                 return value.some((item) => item === userInput);
             }
 
             return value === userInput;
-        })
-    );
+        });
+    });
 }
 
 function sortEntriesBy(property: keyof MediaItem) {

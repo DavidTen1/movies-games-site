@@ -1,8 +1,8 @@
-import mediaDataset from "./datasetFile.tsx";
+import {filterByProp} from "./BaseFuncs.tsx";
 
 const Series = () => <h1>Series</h1>;
 
 
-const seriesData = mediaDataset.filter( a => a.type == 'series');
+const moviesData = filterByProp("TV Series","category");
 
 export default Series;

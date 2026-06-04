@@ -5,6 +5,7 @@ import About from "./About.tsx";
 import Movies from "./Movies.tsx";
 import Games from "./Games.tsx";
 import Series from "./Series.tsx";
+import {filterByProp} from "./BaseFuncs.tsx";
 // import {filterByProp, sortEntriesBy} from "./BaseFuncs.tsx";
 
 function App() {
@@ -104,6 +105,8 @@ function App() {
 //
 //     console.log("23. Sort by type:");
 //     console.log(sortEntriesBy("type"));
+
+     console.log("test", filterByProp("DROP TABLE"));
 
   
   return (

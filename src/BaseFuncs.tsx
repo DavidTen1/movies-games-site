@@ -5,58 +5,37 @@ type MediaItem = typeof mediaDataset[number];
 
 type AllowedFilterKey = keyof typeof allowedFilterKeyValue_Pairs;
 
-const allowedKeys = Object.keys(
-    allowedFilterKeyValue_Pairs
-) as AllowedFilterKey[];
+const allowedKeys = Object.keys(allowedFilterKeyValue_Pairs) as AllowedFilterKey[];
 
 function isAllowedKey(property: unknown): property is AllowedFilterKey {
-    return (
-        typeof property === "string" &&
-        allowedKeys.includes(property as AllowedFilterKey)
-    );
+    return (typeof property === "string" && allowedKeys.includes(property as AllowedFilterKey));
 }
 
-function compareInputWithKeys(userInput: string) {
-    return Object.values(allowedFilterKeyValue_Pairs).some((allowedValues) =>
-        allowedValues.some((value) => String(value) === userInput)
-    );
-}
+function compareInputWithKeys(userInput: string, property?: AllowedFilterKey) {
+    const matchesInput = (value: unknown) =>
+        String(value).includes(userInput);
 
-function compareInputWithKey(
-    userInput: string,
-    property: AllowedFilterKey
-) {
-    return allowedFilterKeyValue_Pairs[property].some(
-        (value) => String(value) === userInput
-    );
-}
-
-function filterByProp(userInput: string, property?: keyof MediaItem) {
     if (property !== undefined) {
-        if (!isAllowedKey(property)) {
-            return [];
-        }
-
-        if (!compareInputWithKey(userInput, property)) {
-            return [];
-        }
-    } else {
-        if (!compareInputWithKeys(userInput)) {
-            return [];
-        }
+        return allowedFilterKeyValue_Pairs[property].some(matchesInput) ;
     }
 
+    return Object.values(allowedFilterKeyValue_Pairs).some((allowedValues) =>
+        allowedValues.some(matchesInput)
+    );
+}
+
+
+function filterByProp(userInput: string, property?: keyof MediaItem) {
+
     return mediaDataset.filter((x) => {
-        const values = isAllowedKey(property)
-            ? [x[property]]
-            : Object.values(x);
+        const values = isAllowedKey(property) && compareInputWithKeys(userInput, property) ? [x[property]] : Object.values(x);
 
         return values.some((value) => {
-            if (Array.isArray(value)) {
-                return value.some((item) => String(item) === userInput);
+            if (value && Array.isArray(value)) {
+                return value.some((item) => String(item).includes(userInput) ||
+                    (item?.actor?.includes(userInput) || item?.character?.includes(userInput))) ;
             }
-
-            return String(value) === userInput;
+            return String(value).includes(userInput);
         });
     });
 }

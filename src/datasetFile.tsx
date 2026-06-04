@@ -125,7 +125,7 @@ const mediaDataset = [
         title: "Stardew Valley",
         type: "game",
         genre: ["Simulation", "Farming", "Indie"],
-        releaseYear: 2016,
+        releaseYear:  2016,
         platforms: ["PC", "PlayStation", "Xbox", "Nintendo Switch", "Mobile"],
         availableOn: ["Steam", "GOG", "Nintendo eShop", "App Store", "Google Play"],
         priceType: "Paid",

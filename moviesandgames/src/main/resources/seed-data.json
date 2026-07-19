@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "type": "movie",
+    "title": "Blade Runner 2049",
+    "releaseYear": 2017,
+    "genre": ["Sci-Fi", "Drama"],
+    "director": "Denis Villeneuve",
+    "writer": ["Hampton Fancher", "Michael Green"],
+    "cast": [
+      { "name": "Ryan Gosling", "role": "K" },
+      { "name": "Harrison Ford", "role": "Rick Deckard" }
+    ],
+    "rating": 8.0
+  },
+  {
+    "id": 2,
+    "type": "game",
+    "title": "Elden Ring",
+    "releaseYear": 2022,
+    "genre": ["Action RPG"],
+    "director": "Hidetaka Miyazaki",
+    "writer": "Hidetaka Miyazaki",
+    "cast": [],
+    "platform": ["PC", "PS5", "Xbox Series X"],
+    "rating": 9.5
+  },
+  {
+    "id": 3,
+    "type": "tv",
+    "title": "Chernobyl",
+    "releaseYear": 2019,
+    "genre": ["Drama", "History"],
+    "director": "Johan Renck",
+    "writer": "Craig Mazin",
+    "cast": [
+      { "name": "Jared Harris", "role": "Valery Legasov" },
+      { "name": "Stellan Skarsgård", "role": "Boris Shcherbina" }
+    ],
+    "rating": 9.4
+  }
+]

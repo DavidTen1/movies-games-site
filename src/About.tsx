@@ -10,5 +10,5 @@ function About () {
         </>
     );
 }
-
+// Why I did the page and what is it for?
 export default About;

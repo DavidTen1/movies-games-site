@@ -16,7 +16,7 @@ const decorativeImages = [
     "thomas-and-friends.png",
     "victorious.png",
     "x-files.png",
-];
+]; // list of intro page images
 
 const API_ORIGIN = "http://localhost:8080";
 
@@ -26,7 +26,7 @@ const API_ORIGIN = "http://localhost:8080";
         <div
             style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(4, 150px)",
+                gridTemplateColumns: "repeat(4, 150px)", // images are split in 4 x 4 overall
                 gridAutoRows: "150px",
                 gap: "8px",
                 justifyContent: "center",
@@ -43,7 +43,7 @@ const API_ORIGIN = "http://localhost:8080";
                     }}
                 >
                     <img
-                        src={API_ORIGIN +"/promoImages/"+ src}
+                        src={API_ORIGIN +"/promoImages/"+ src} // image in promoImages
                         alt=""
                         style={{
                             display: "block",

@@ -4,7 +4,7 @@ import "./MediaList.css";
 interface CastMember {
     name: string;
     role: string;
-}
+} // actors and characters
 
 interface MediaEntry {
     id: number;
@@ -18,7 +18,7 @@ interface MediaEntry {
     platform: string[];
     description: string;
     rating: number;
-}
+} // is it a game, movie or a series? Year of release, cast and characters, which platform, how well liked
 
 const imageIndex = Math.floor(Math.random() * 3) + 1;
 
@@ -59,7 +59,7 @@ function MediaList({ filterQuality }: { filterQuality?: unknown }) {
                             loading="lazy"
                         />
                         <span className="media-card__type">{work.type}</span>
-                        {work.rating != null && (
+                        {work.rating != null && ( // if rating exist, show it as e with one post-comma number  value
                             <span className="media-card__rating">★ {work.rating.toFixed(1)}</span>
                         )}
                     </div>
@@ -69,10 +69,10 @@ function MediaList({ filterQuality }: { filterQuality?: unknown }) {
                             {work.title} <span className="media-card__year">({work.releaseYear})</span>
                         </h2>
 
-                        {work.director && (
+                        {work.director && ( // director
                             <p className="media-card__director">Directed by {work.director}</p>
                         )}
-                        {work.cast.map(entry => (
+                        {work.cast.map(entry => ( // loop of actors and cast
                            <p>{entry.name} + {entry.role}  </p>
                         ))}
 
@@ -85,13 +85,13 @@ function MediaList({ filterQuality }: { filterQuality?: unknown }) {
                             </ul>
                         )}
 
-                        {work.description && (
+                        {work.description && ( // plot of wok
                             <p className="media-card__description">{work.description}</p>
                         )}
 
                         {work.releaseYear && (<p className="media-card__releaseYear">{work.releaseYear}</p>)}
 
-                        {work.cast?.length > 0 && (
+                        {work.cast?.length > 0 && ( // does a cast exist?
                             <ul className="media-card__cast">
                                 {work.cast.map((entry) => (
                                     <li key={entry.name} className="media-card__cast-item">
@@ -102,7 +102,7 @@ function MediaList({ filterQuality }: { filterQuality?: unknown }) {
                             </ul>
                         )}
 
-                        {work.platform?.length > 0 && (
+                        {work.platform?.length > 0 && ( // are platforms mentioned
                             <ul className="media-card__platforms">
                                 {work.platform.map((p) => (
                                     <li key={p} className="media-card__platform">{p}</li>
@@ -110,7 +110,7 @@ function MediaList({ filterQuality }: { filterQuality?: unknown }) {
                             </ul>
                         )}
 
-                        {work.writer?.length > 0 && (
+                        {work.writer?.length > 0 && (  // does writer exist
                             <p className="media-card__writers">
                                 Written by {work.writer.join(", ")}
                             </p>

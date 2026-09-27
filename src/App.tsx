@@ -6,21 +6,19 @@ import Movies from "./Movies.tsx";
 import Games from "./Games.tsx";
 import Series from "./Series.tsx";
 import MediaList from "./MediaList.tsx";
-// import {filterByProp, sortEntriesBy} from "./BaseFuncs.tsx";
 
 function App() {
-  
   return (
       <Router>
         <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/movies">Movies</Link></li>
-            <li><Link to="/games">Games</Link></li>
-              <li><Link to="/series">Series</Link></li>
-              <li><Link to="/medialist">Media List</Link></li>
-          </ul>
+          <ol>
+            <Link to="/">Home</Link> |
+            <Link to="/about">About</Link> |
+            <Link to="/movies">Movies</Link> |
+            <Link to="/games">Games</Link> |
+              <Link to="/series">Series</Link> |
+              <Link to="/medialist">Media List</Link> |
+          </ol>
         </nav>
         <Routes>
           <Route path="/" Component={Home} />
@@ -31,6 +29,8 @@ function App() {
             <Route path="/medialist" Component={MediaList}/>
         </Routes>
       </Router>
+
+
   )
 }
 

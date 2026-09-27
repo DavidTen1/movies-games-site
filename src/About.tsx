@@ -1,12 +1,12 @@
+import "./About.css"
+
 function About () {
-   const currentYear = new Date().getFullYear();
-
-    return (<><h1>About the Movies and Games Site</h1>
-        <h2> Created by: David Tentser</h2>
-            <h2> Date of creation: May 9th 2026</h2>
-        <h2>Contact: To be added </h2>
-            <p> © 2026 - {currentYear} </p>
-
+    return (<><h1 className={"promotitle"}>About the Movies and Games Site</h1>
+        <h2 className={"promotitle"}> Created by: David Tentser</h2>
+            <h2 className={"promotitle"}> Date of creation: May 9th 2026</h2>
+        <h2 className={"promotitle"}>Contact: To be added </h2>
+         <div> If you have any wishes or improvement suggestions, please write an email via the formular</div>
+            <p> © 2026 - {new Date().getFullYear()} </p>
         </>
     );
 }

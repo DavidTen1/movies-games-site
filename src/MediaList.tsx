@@ -24,7 +24,7 @@ const imageIndex = Math.floor(Math.random() * 3) + 1;
 
 const API_ORIGIN = "http://localhost:8080";
 
-function MediaList() {
+function MediaList({ filterQuality }: { filterQuality?: unknown }) {
     const [media, setMedia] = useState<MediaEntry[]>([]);
 
     useEffect(() => {
@@ -33,6 +33,18 @@ function MediaList() {
             .then((data: MediaEntry[]) => setMedia(data))
             .catch((err) => console.error("Failed to fetch media:", err));
     }, []);
+
+    function filterMedia(mediaArray: MediaEntry[], quality?: unknown) {
+     if (mediaArray.length === 0) {return;}
+     const mediaTypes = ["movie","game", "TV Series"]
+
+     if (mediaTypes.includes(quality as string) ) {
+         return mediaArray.filter(entry => entry.type === quality);
+     }
+     else {
+         return mediaArray;
+     }
+    }
 
     return (
         <ul className="media-grid">
@@ -60,6 +72,10 @@ function MediaList() {
                         {work.director && (
                             <p className="media-card__director">Directed by {work.director}</p>
                         )}
+                        {work.cast.map(entry => (
+                           <p>{entry.name} + {entry.role}  </p>
+                        ))}
+
 
                         {work.genre?.length > 0 && (
                             <ul className="media-card__tags">
@@ -72,6 +88,8 @@ function MediaList() {
                         {work.description && (
                             <p className="media-card__description">{work.description}</p>
                         )}
+
+                        {work.releaseYear && (<p className="media-card__releaseYear">{work.releaseYear}</p>)}
 
                         {work.cast?.length > 0 && (
                             <ul className="media-card__cast">
